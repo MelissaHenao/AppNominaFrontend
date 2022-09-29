@@ -10,7 +10,11 @@ button.addEventListener('click', function (event) {
     console.log(contraseña)
 
     if(usuario == "" || contraseña=="" || correo==""){
-        alert("Todos los datos son requeridos")
+        Swal.fire({
+            icon: 'error' ,
+            title: 'Oops...',
+            text: 'Error: Todos los datos son requeridos!',
+          })
     }else{
         let user = {
             "username": usuario,
@@ -27,11 +31,21 @@ button.addEventListener('click', function (event) {
         })
         .then((response) => {
             if(response.status == 201){
-                alert("Registro Exitoso" );
-                window.location.href = "login.html"
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Registro exitoso!! ',
+                    showConfirmButton: false,
+                    timer: 10000
+                  })
+                setTimeout(()=>    window.location.href = "login.html", 1500)               
                 return;
             }else{
-                alert("Usuario ya Registrado");
+                Swal.fire({
+                    icon: 'error' ,
+                    title: 'Oops...',
+                    text: 'Error: Usuario ya registrado o ya Existe!',
+                  })
                 console.log(response)
                 return;
                 

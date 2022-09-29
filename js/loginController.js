@@ -1,38 +1,5 @@
-
 let button = document.getElementById('ingresar');
 
-//Funcion Validar
-// function validarLogin() {
-//     var usuario = document.getElementById("userName").value;
-//     let contraseña = document.getElementById("password").value;
-
-//     fetch(`http://localhost:5000/api/user/${usuario}` + `${contraseña}`,{
-//         method:'GET',
-//         headers:{
-//             'Content-Type': 'application/json'
-//         }
-//     })
-//     .then((response) =>{
-//         console.log(response)
-//         return response.json()
-//     })
-
-//     if(usuario=="" || contraseña==""){
-//         alert("Por favor Ingrese los datos");
-//         return;
-//     }else{
-//         if (usuario==response.username && contraseña==response.password) {
-//             alert("Bienvenido " + response.username);
-//             window.location.href = "./registro.html"
-//             return;
-//         }
-//     }
-    
-//     alert("Datos Incorrectos o Usuario No Registrado");
-//     return;
-// }
-
-//Escucho el Click en el boton de registro
 button.addEventListener('click', function (event) {
     var usuario = document.getElementById("userName").value;
     let contraseña = document.getElementById("password").value;
@@ -54,11 +21,21 @@ button.addEventListener('click', function (event) {
     })
     .then((response) => {
         if(response.status == 200){
-            alert("Bienvenido " + usuario);
-            window.location.href = "./index.html"
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Bienvendio: ' + usuario,
+                showConfirmButton: false,
+                timer: 10000
+              })
+            setTimeout(()=>   window.location.href = "./index.html", 1500)
             return;
         }else{
-            alert("Datos Incorrectos o Usuario No Registrado");
+            Swal.fire({
+                icon: 'error' ,
+                title: 'Oops...',
+                text: 'Error: Datos incorrectos o usuarios no registrados!',
+              })
             return;
         }
     })
