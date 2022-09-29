@@ -1,0 +1,39 @@
+.cuerpo{
+    background-color: #14112c;
+  
+}
+
+h5{
+    color: #6AB8EEE6;
+    text-align: center;
+    
+}
+h2,p{
+    color: white;
+    text-align: center;
+}
+.linea{
+    background-color: #6AB8EEE6;
+    height: 10px;
+    width: 8%;
+    margin-left: 45%;
+    margin-bottom: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    background:white;
+    text-align: center;
+    padding: 20px 25px;
+    box-shadow: 0 5px 10px rebeccapurple;
+    border-radius: 20px;
+    width: 300px;
+    opacity: 0.8;
+    
+}
+
+.cambioColor:hover{
+    color: #6AB8EEE6 !important;
+}

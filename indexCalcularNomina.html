@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/nomina.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body class="cuerpo container-fluid">
+    <nav class="navbar navbar-expand-lg  menu  " id="menu">
+    
+        <div class="container-fluid">
+          <a class="navbar-brand  cambioColor text-white" href="/index.html"> <b>NOMINA A TU ALCANCE</b> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white cambioColor " aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white cambioColor" href="#">Conocenos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-white cambioColor" href="#">Contáctanos</a>
+              </li>
+            </ul>
+          </div>
+          <a href="/indexPrincipal.html" ><b><span class="navbar-text cambioColor text-white ">
+            SALIR
+          </span></b></a>
+          
+        </div>        
+      </nav>
+    <header class="">
+        <div class="row">
+            <div class="col-12 ">
+                <h5 class="pb-3 pt-2"> NOMINA </h5>
+                <h2>CALCULAR NOMINA</h2>
+                <div class="linea">
+    
+                </div>
+                <div >
+                    <p>Este espacio podras utilizarlo para realizar los calculos de nomina de tu empresa</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+      <form class="mt-5">
+        <h3><b>CALCULAR NOMINA</b></h3>
+        <input id="diasLaborados" class="form-label form-control" type="number" placeholder="ingrese dias laborados" required>
+        <input id="valorHora" class="form-label form-control" type="number" placeholder="ingrese valor de hora" required>
+        <input id="descSalud" class="form-label form-control" type="number" placeholder="ingrese deduccion salud" required>
+        <input id="descPension" class="form-label form-control" type="number" placeholder="ingrese deduccion pension" required>
+        <input id="subTransporte" class="form-label form-control" type="number" placeholder="ingrese subsidio de transporte" required>
+        <button id="calcular" type="button" class="btn btn-outline-dark">Calcular nomina</button>
+      </form>
+  
+        
+    </main>
+ 
+    <footer class="mt-5 ">
+        <section class="bg-dark text-white row">
+            <h6 class="text-center pt-5"> Desarrollado por Melissa Henao, Emily palacio & juan buelvas </h6>
+            <h6 class="text-center pb-3">Copyright © 2022</h6>
+        </section>
+    </footer>
+
+   
+    
+    <script src="./js/NominaControllers.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
