@@ -61,3 +61,8 @@ body{
     background-attachment: fixed;
    background-image: url('https://cdn.bitrix24.site/bitrix/images/landing/krayt/artificial_intelligence/0.jpg');
  }
+ 
+ a{
+    text-decoration: none !important;
+ }
+
